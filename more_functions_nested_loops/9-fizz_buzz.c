@@ -1,10 +1,10 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * main - The “Fizz-Buzz test”
+ * main - Entry point
  *
  *
- * Return : 0
+ * Return : 0 (Success)
  **/
 int main(void)
 {
