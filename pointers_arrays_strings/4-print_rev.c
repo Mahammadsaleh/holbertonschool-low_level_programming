@@ -18,7 +18,8 @@ void print_rev(char *str)
 			last = *(str + i);
 			i++;
 		}
-
+		i--;
+		i--;
 		while (i != -1)
 		{
 			last = *(str + i);
