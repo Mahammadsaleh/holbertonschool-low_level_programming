@@ -16,7 +16,10 @@ void _puts(char *str)
 	while (last != '\0')
 	{
 		last = *(str + i);
-		_putchar(last);
+		if (last != '\0')
+		{
+			_putchar(last);	
+		}
 		i++;
 	}
 	_putchar('\n');
