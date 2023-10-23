@@ -18,7 +18,7 @@ void _puts(char *str)
 		last = *(str + i);
 		if (last != '\0')
 		{
-			_putchar(last);	
+			_putchar(last);
 		}
 		i++;
 	}
