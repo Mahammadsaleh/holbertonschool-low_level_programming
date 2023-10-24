@@ -12,7 +12,7 @@ int _atoi(char *s)
 {
 	int i = 0;
 	char last = *s;
-	int result = 0;
+	unsigned int result = 0;
 	int counter = 0;
 	bool flag = false;
 
