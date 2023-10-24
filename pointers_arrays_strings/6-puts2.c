@@ -15,7 +15,7 @@ void puts2(char *s)
 		i++;
 	}
 
-	while (j < i - 1)
+	while (j < i)
 	{
 		if (j % 2 == 0)
 		{
