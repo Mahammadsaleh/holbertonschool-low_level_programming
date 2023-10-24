@@ -1,6 +1,6 @@
 #include "main.h"
 #include <stdio.h>
-
+#include <stdbool.h>
 /**
  * print_rev - prints string
  * @str: character
@@ -13,13 +13,19 @@ void print_rev(char *str)
 		char last;
 		int i = 0;
 
-		while (last != '\0')
+		while (true)
 		{
 			last = *(str + i);
-			i++;
+			if (last != '\0')
+			{
+				i++;
+			}
+			else
+			{
+				break;
+			}
 		}
-		i--;
-		i--;
+
 		while (i != -1)
 		{
 			last = *(str + i);
