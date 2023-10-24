@@ -20,10 +20,6 @@ void puts_half(char *s)
 	{
 		i = (len - 1) / 2;
 	}
-	else
-	{
-		i = len / 2;
-	}
 
 	while (s[i] != '\0')
 	{
