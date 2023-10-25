@@ -17,12 +17,14 @@ char *_strncat(char *dest, char *src, int n)
 	{
 		dest++;
 	}
-	while (i < n)
+	while (i < ni && *src != '\0')
 	{
 		*dest = *src;
 		dest++;
 		src++;
 		i++;
 	}
+
+	*dest = '\0';
 	return (concated);
 }
