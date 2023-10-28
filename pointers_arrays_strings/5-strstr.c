@@ -25,7 +25,7 @@ char *_strstr(char *haystack, char *needle)
 
 	if (start == -1)
 	{
-		return NULL;
+		return (NULL);
 	}
 
 	p = &haystack[i];
