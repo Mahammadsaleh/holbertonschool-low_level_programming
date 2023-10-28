@@ -1,7 +1,7 @@
-#include <stdio.h>
-#include <string.h>
+#include <stdio.h> 
+#include <string.h> 
 /**
- * _strstr - finds the first occurrence of the substring
+ * _strstr - finds the first occurrence of the substring needle in the string haystackg
  *
  * @haystack: Destination string
  * @needle: Maximum number of characters to copy from src
@@ -10,25 +10,21 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-	int i;
-	int start = -1;
-	char *p = haystack;
-
+	int i, j;
+	
 	for (i = 0; haystack[i] != '\0'; i++)
 	{
-		if (needle[0] == haystack[i])
+		for (j = 0; needle[j] != '\0'; j++)
 		{
-			start = i;
-			break;
+			if (haystack[i + j] != needle[j])
+				break;
+		}
+
+		if (needle[j] == '\0')
+		{
+			return &haystack[i];
 		}
 	}
 
-	if (start == -1)
-	{
-		return (NULL);
-	}
-
-	p = &haystack[i];
-
-	return (p);
+	return (NULL); 
 }
