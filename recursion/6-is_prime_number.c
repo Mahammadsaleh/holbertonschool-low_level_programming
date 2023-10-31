@@ -33,11 +33,12 @@ int checker(int n, int m)
  */
 int is_prime_number(int n)
 {
+	int check;
+
 	if (n <= 1)
 	{
 		return (0);
 	}
-	int check;
 
 	check = checker(n, n / 2);
 
