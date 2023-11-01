@@ -1,6 +1,8 @@
 #include <stdio.h>
 /**
  * main - main
+ * argc: arguments count
+ * argv: pointer
  *
  * Return: int
  */
