@@ -10,22 +10,27 @@
  */
 int main(int argc, char *argv[])
 {
-		int result;
-		int i;
+	int result = 0;
+	int i;
 
-		for (i = 1; i < argc; i++)
-		{
-		if (*argv[i] < 58 && *argv[i] > 47)
-		{
-			result += atoi(argv[i]);
-		}
-		else
-		{
-			printf("Error\n");
-			return (1);
-		}
-		}
-		printf("%d\n", result);
+	for (i = 1; i < argc; i++)
+	{
+		char *arg = argv[i];
+		int j;
 
-		return (0);
+		for (j = 0; j < (int)strlen(arg); j++)
+		{
+			if (arg[j] < '0' || arg[j] > '9')
+			{
+				printf("Error\n");
+				return (1);
+			}
+		}
+
+		result += atoi(arg);
+	}
+
+	printf("%d\n", result);
+
+	return (0);
 }
