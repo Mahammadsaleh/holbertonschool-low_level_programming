@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 
 		for (i = 1; i < argc; i++)
 		{
-		if (argv[i] < 58 && argv[i] > 47)
+		if (*argv[i] < 58 && *argv[i] > 47)
 		{
 			result += atoi(argv[i]);
 		}
