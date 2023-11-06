@@ -3,43 +3,7 @@
 #include <stdlib.h>
 
 /**
- * concat_strings - Concatenates two strings.
- * @s1: The first string.
- * @s2: The second string.
- *
- * Return: A newly allocated concatenated string, or NULL on failure.
- */
-char *concat_strings(char *s1, char *s2)
-{
-	if (s1 == NULL)
-	{
-		return (strdup(s2));
-	}
-	else if (s2 == NULL)
-	{
-		return (strdup(s1));
-	}
-	else if (s1 == NULL && s2 == NULL)
-	{
-		return (NULL);
-	}
-	else
-	{
-		char *conc = (char *)malloc(strlen(s1) + strlen(s2) + 1);
-
-		if (conc == NULL)
-		{
-			return (NULL);
-		}
-
-		strcpy(conc, s1);
-		strcat(conc, s2);
-		return (conc);
-	}
-}
-
-/**
- * str_concat - Concatenates two strings.
+ * *str_concat - Concatenates two strings.
  * @s1: The first string.
  * @s2: The second string.
  *
@@ -47,11 +11,43 @@ char *concat_strings(char *s1, char *s2)
  */
 char *str_concat(char *s1, char *s2)
 {
-	if (s1 == NULL && s2 == NULL)
+	int size;
+	char *conc;
+	int i = 0;
+
+	if (s1 == NULL)
+	{
+		s1 = "";
+	}
+	if (s2 == NULL)
+	{
+		s2 = "";
+	}
+
+	size = strlen(s1) + strlen(s2) + 1;
+	conc = (char *)malloc(size * sizeof(char));
+
+	if (conc == NULL)
 	{
 		return (NULL);
 	}
 
-	return (concat_strings(s1, s2));
+	while (*s1 != '\0')
+	{
+		conc[i] = *s1;
+		i++;
+		s1++;
+	}
+
+	while (*s2 != '\0')
+	{
+		conc[i] = *s2;
+		i++;
+		s2++;
+	}
+
+	conc[i] = '\0';
+
+	return (conc);
 }
 
