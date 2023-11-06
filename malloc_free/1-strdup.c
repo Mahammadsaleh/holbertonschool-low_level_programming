@@ -14,6 +14,11 @@ char *_strdup(char *str)
 	int size;
 	int i;
 
+	if (str == NULL)
+	{
+		return (NULL);
+	}
+
 	size = strlen(str);
 	arr = malloc(size * sizeof(char));
 	if (arr == NULL)
