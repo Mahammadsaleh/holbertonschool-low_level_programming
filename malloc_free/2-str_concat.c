@@ -14,21 +14,26 @@ char *str_concat(char *s1, char *s2)
 	char *conc;
 	int i;
 	int j;
-	
+
+	if (s1 == NULL || s2 == NULL)
+	{
+		return (NULL);
+	}
+
 	size = strlen(s1) + strlen(s2) + 1;
-	conc = (char*)malloc((int)size * sizeof(char));
+	conc = (char *)malloc((int)size * sizeof(char));
 
 	if (conc == NULL)
 	{
 		return (NULL);
 	}
 
-	for ( i = 0 ;i < (int)strlen(s1) ;i++)
+	for (i = 0; i < (int)strlen(s1); i++)
 	{
 		conc[i] = s1[i];
 	}
 
-	for ( j = 0 ;j < (int)size; j++)
+	for (j = 0; j < (int)size; j++)
 	{
 		conc[i] = s2[j];
 		i++;
