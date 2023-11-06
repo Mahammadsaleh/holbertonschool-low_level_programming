@@ -14,7 +14,7 @@ char *create_array(unsigned int size, char c)
 	char *arr;
 	unsigned int i;
 
-	if (size == INT_MAX || size == 0)
+	if (size == UINT_MAX || size == 0)
 	{
 		return (NULL);
 	}
