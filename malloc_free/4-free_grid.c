@@ -3,7 +3,7 @@
 /**
  * free_grid - free the memory
  * @**grid: array
- * @height: height 
+ * @height: height
  *
  * Return: nothing
  */
