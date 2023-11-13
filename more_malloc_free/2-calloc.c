@@ -13,7 +13,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	char *arr;
 
-	arr = malloc((nmemb + 1) * size);
+	arr = malloc((nmemb) * size);
 	if (nmemb == 0 || size == 0)
 	{
 		free(arr);
@@ -24,6 +24,6 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		return (NULL);
 	}
 
-	memset(arr, 0, (nmemb + 1) * size);
+	memset(arr, 0, (nmemb) * size);
 	return (arr);
 }
