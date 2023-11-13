@@ -24,5 +24,6 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		return (NULL);
 	}
 
+	memset(ptr, 0, total_size);
 	return (arr);
 }
