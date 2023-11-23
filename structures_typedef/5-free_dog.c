@@ -5,7 +5,7 @@
  * free_dog - Frees memory allocated for a dog structure
  * @d: Pointer to dog structure to free
  *
- * Description: Frees memory allocated for the dog's name and the dog structure itself.
+ * Description: Frees memory allocated
  */
 void free_dog(dog_t *d)
 {
