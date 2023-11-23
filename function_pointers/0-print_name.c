@@ -1,3 +1,4 @@
+#include <stdio.h>
 /**
  * print_name - print name
  * @name: str
