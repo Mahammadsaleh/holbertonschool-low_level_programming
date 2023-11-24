@@ -1,10 +1,18 @@
 #ifndef CALC_H
 #define CALC_H
 
-/* Structure for operation and function association */
-typedef struct op {
-    char *op;
-    int (*f)(int a, int b);
+/**
+ * struct op - Struct op
+ *
+ * @op: The operator
+ * @f: The function associated
+ *
+ * Description: Structure containing an operator and a function pointer.
+ */
+typedef struct op
+{
+	char *op;
+	int (*f)(int a, int b);
 } op_t;
 
 /* Prototypes */
@@ -16,4 +24,3 @@ int op_mod(int a, int b);
 int (*get_op_func(char *s))(int, int);
 
 #endif /* CALC_H */
-
