@@ -56,7 +56,7 @@ void print_all(const char * const format, ...)
 	void (*print_func[])(va_list) = {
 		print_char,
 		print_int,
-		iprint_float,
+		print_float,
 		print_string};
 
 	va_start(args, format);
