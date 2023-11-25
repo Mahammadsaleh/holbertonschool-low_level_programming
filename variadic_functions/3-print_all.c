@@ -8,7 +8,7 @@
  */
 void print_char(va_list args)
 {
-    printf("%c", va_arg(args, int));
+	printf("%c", va_arg(args, int));
 }
 
 /**
@@ -17,7 +17,7 @@ void print_char(va_list args)
  */
 void print_int(va_list args)
 {
-    printf("%d", va_arg(args, int));
+	printf("%d", va_arg(args, int));
 }
 
 /**
@@ -26,7 +26,7 @@ void print_int(va_list args)
  */
 void print_float(va_list args)
 {
-    printf("%f", va_arg(args, double));
+	printf("%f", va_arg(args, double));
 }
 
 /**
@@ -35,12 +35,12 @@ void print_float(va_list args)
  */
 void print_string(va_list args)
 {
-    char *str = va_arg(args, char *);
+	char *str = va_arg(args, char *);
 
-    if (str == NULL)
-        str = "(nil)";
+	if (str == NULL)
+		str = "(nil)";
 
-    printf("%s", str);
+	printf("%s", str);
 }
 
 /**
@@ -49,32 +49,32 @@ void print_string(va_list args)
  */
 void print_all(const char * const format, ...)
 {
-    va_list args;
-    unsigned int i = 0, j = 0;
-    char *sep = "";
-    char *valid_types = "cifs";
-    void (*print_func[])(va_list) = {print_char, print_int, print_float, print_string};
+	va_list args;
+	unsigned int i = 0, j = 0;
+	char *sep = "";
+	char *valid_types = "cifs";
+	void (*print_func[])(va_list) = {print_char, print_int, print_float, print_string};
 
-    va_start(args, format);
+	va_start(args, format);
 
-    while (format && format[i])
-    {
-        j = 0;
-        while (valid_types[j])
+	while (format && format[i])
 	{
-            if (format[i] == valid_types[j])
-	    {
-                printf("%s", sep);
-                print_func[j](args);
-                sep = ", ";
-                break;
-            }
-            j++;
-        }
-        i++;
-    }
+		j = 0;
+		while (valid_types[j])
+	{
+			if (format[i] == valid_types[j])
+		{
+				printf("%s", sep);
+				print_func[j](args);
+				sep = ", ";
+				break;
+			}
+			j++;
+		}
+		i++;
+	}
 
-    printf("\n");
-    va_end(args);
+	printf("\n");
+	va_end(args);
 }
 
