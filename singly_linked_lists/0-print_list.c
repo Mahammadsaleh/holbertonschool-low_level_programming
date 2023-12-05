@@ -1,5 +1,11 @@
 #include <stdio.h>
 #include "lists.h"
+/**
+ * print_list - print list
+ * @h: list_t type node
+ *
+ * Return: unsigned int
+ */
 
 size_t print_list(const list_t *h)
 {
