@@ -3,7 +3,7 @@
 #include <string.h>
 #include "lists.h"
 /**
- * add_node - ad node to the first index of list
+ * add_node_end - ad node to the first index of list
  * @head: list_t type node
  * @str: string
  *
@@ -25,7 +25,7 @@ list_t *add_node_end(list_t **head, const char *str)
 		(*head)->str = strdup(str);
 		(*head)->len = strlen(str);
 		(*head)->next = NULL;
-		return *head;
+		return (*head);
 	}
 
 	while (current->next != NULL)
@@ -35,6 +35,7 @@ list_t *add_node_end(list_t **head, const char *str)
 
 	if (new_node == NULL)
 	{
+		free(neü_node);
 		return (NULL);
 	}
 	new_node->str = strdup(str);
