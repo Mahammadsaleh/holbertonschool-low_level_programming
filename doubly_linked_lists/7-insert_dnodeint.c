@@ -44,7 +44,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		{
 	        	return (NULL);
 		}
-		elseZZ
+		else
 		{
 			new_node->n = n;
 			new_node->prev = cur;
