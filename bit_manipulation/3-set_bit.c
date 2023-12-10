@@ -10,11 +10,21 @@
 int set_bit(unsigned long int *n, unsigned int index)
 {
 	unsigned long int mask = 0x01;
+	unsigned long int temp = *n;
 
 	if (index > (sizeof(unsigned long int) * 8 - 1))
 		return (-1);
 
 	mask <<= index;
-	*n |= mask;
-	return (*n);
+	temp |= mask;
+
+	if (temp == *n)
+	{
+		return (0); 
+	}
+	else
+	{
+		*n = temp;
+		return 1; 
+	}
 }
