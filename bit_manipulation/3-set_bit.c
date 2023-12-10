@@ -20,11 +20,11 @@ int set_bit(unsigned long int *n, unsigned int index)
 
 	if (temp == *n)
 	{
-		return (0); 
+		return (0);
 	}
 	else
 	{
 		*n = temp;
-		return 1; 
+		return (1); 
 	}
 }
