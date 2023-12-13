@@ -92,7 +92,7 @@ int main(int ac, char **av)
 	{
 		close(fd_from);
 		close(fd_to);
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", filename);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
 		exit(98);
 	}
 	close_from = close(fd_from);
