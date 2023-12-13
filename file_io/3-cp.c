@@ -82,13 +82,18 @@ int main(int ac, char **av)
 	file_to_checker(fd_to, av[2]);
 	while ((rlen = read(fd_from, buffer, 1024)) > 0)
 	{
-		if (rlen == 0)
-			fd_from = -1;
 		file_from_checker(fd_from, av[1]);
 		wlen = write(fd_to, buffer, rlen);
 		if (rlen != wlen)
 			fd_to = -1;
 		file_to_checker(fd_to, av[2]);
+	}
+	if (rlen == -1)
+	{
+		close(fd_from);
+		close(fd_to);i
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", filename);
+		exit(98);
 	}
 	close_from = close(fd_from);
 	close_to = close(fd_to);
