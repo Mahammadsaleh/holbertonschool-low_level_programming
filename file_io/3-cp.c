@@ -91,7 +91,7 @@ int main(int ac, char **av)
 	if (rlen == -1)
 	{
 		close(fd_from);
-		close(fd_to);i
+		close(fd_to);
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", filename);
 		exit(98);
 	}
