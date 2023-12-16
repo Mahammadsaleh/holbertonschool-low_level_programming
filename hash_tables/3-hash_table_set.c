@@ -42,13 +42,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			free(new_node);
 			return (1);
 		}
-		else if (tmp_h->next == NULL)
-		{
-			tmp_h = ht->array[hash_index];
-			ht->array[hash_index] = new_node;
-			ht->array[hash_index]->next = tmp_h;
-		}
 		tmp_h = tmp_h->next;
 	}
+	new_node->next = ht->array[hash_index];
+	ht->array[hash_index] = new_node;
 	return (1);	
 }
