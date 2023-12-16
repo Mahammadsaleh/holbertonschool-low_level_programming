@@ -3,11 +3,11 @@
 #include <stdio.h>
 #include "hash_tables.h"
 /**
- * hash_table_get - get key
+ * hash_table_get - get key value
  * @ht: head
  * @key: key
  *
- * Return: key
+ * Return: value
  */
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
@@ -22,7 +22,7 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	{
 		if (strcmp(head->key, key) == 0)
 		{
-			return (head->key);
+			return (head->value);
 		}
 		head = head->next;
 
