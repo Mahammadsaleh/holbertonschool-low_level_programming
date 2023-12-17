@@ -10,7 +10,7 @@
 void hash_table_print(const hash_table_t *ht)
 {
 	hash_node_t *node;
-	unsigned long int size = ht->size;
+	unsigned long int size;
 	unsigned long int i;
 	char *sep = "";
 
@@ -18,6 +18,7 @@ void hash_table_print(const hash_table_t *ht)
 	{
 		return;
 	}
+	size = ht->size;
 	printf("{");
 	for (i = 0; i < size; i++)
 	{
