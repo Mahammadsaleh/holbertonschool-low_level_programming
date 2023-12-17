@@ -9,13 +9,13 @@
  */
 void hash_table_print(const hash_table_t *ht)
 {
-	hash_node_t *array = ht->array;
+	hash_node_t **array = ht->array;
 	hash_node_t *node;
 	unsigned long int size = ht->size;
 	unsigned long int i;
 	char *sep = "";
 
-	if (ht == NULL || size == NULL || arry == NULL)
+	if (ht == NULL || size == 0 || *array == NULL)
 	{
 		return;
 	}
