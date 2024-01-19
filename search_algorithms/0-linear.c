@@ -3,6 +3,7 @@
 /**
  * linear_search - search algorithm
  * @array: array
+ * @size: size
  * @value: value
  *
  * Return: int
